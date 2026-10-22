@@ -67,6 +67,78 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ricerca: form dimostrativo, non invia dati -->
+            <section class="section">
+                <div class="container">
+                    <div class="box">
+                        <h2 class="title is-4">Cerca un evento</h2>
+                        <form>
+                            <!-- 4 colonne su desktop, 2 su tablet, 1 su mobile -->
+                            <div class="columns is-multiline">
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="nome-evento">Nome dell'evento</label>
+                                        <div class="control">
+                                            <input class="input" id="nome-evento" name="nome-evento" type="text" placeholder="Es. Summer Beats Festival">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="categoria">Categoria</label>
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select id="categoria" name="categoria">
+                                                    <option value="">Tutte le categorie</option>
+                                                    <option value="musica">Musica</option>
+                                                    <option value="sport">Sport</option>
+                                                    <option value="tecnologia">Tecnologia</option>
+                                                    <option value="arte">Arte e cultura</option>
+                                                    <option value="food">Food e festival</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="citta">Città</label>
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select id="citta" name="citta">
+                                                    <option value="">Tutte le città</option>
+                                                    <option value="milano">Milano</option>
+                                                    <option value="roma">Roma</option>
+                                                    <option value="torino">Torino</option>
+                                                    <option value="bologna">Bologna</option>
+                                                    <option value="napoli">Napoli</option>
+                                                    <option value="firenze">Firenze</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="data">Data</label>
+                                        <div class="control">
+                                            <input class="input" id="data" name="data" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="help mb-4">Puoi compilare anche un solo campo: quelli vuoti non vengono considerati nella ricerca.</p>
+                            <div class="buttons">
+                                <!-- type="button": il pulsante non invia il form -->
+                                <button class="button is-primary" type="button">Cerca</button>
+                                <!-- type="reset": svuota tutti i campi del form -->
+                                <button class="button is-light" type="reset">Azzera filtri</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
 
     </body>
