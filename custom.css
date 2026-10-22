@@ -1,1 +1,6 @@
 /* stile personalizzato di EventHub */
+
+/* card tutte alte uguali nella stessa riga */
+.card {
+    height: 100%;
+}
