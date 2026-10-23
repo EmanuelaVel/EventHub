@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="custom.css">
     </head>
     <body>
-        <!-- navbar: uguale in tutte le pagine, cambia solo la voce attiva -->
+        <!-- NAVBAR: uguale in tutte le pagine, cambia solo la voce attiva -->
         <header>
             <nav class="navbar" role="navigation" aria-label="Navigazione principale">
                 <div class="container">
@@ -39,6 +39,109 @@
                 </div>
             </nav>
         </header>
+
+        <main>
+            <!-- HERO compatto con breadcrumb e titolo, unico h1 -->
+            <section class="hero is-small has-background-light">
+                <div class="hero-body">
+                    <div class="container">
+                        <nav class="breadcrumb" aria-label="Percorso">
+                            <ul>
+                                <li><a href="index.html">Homepage</a></li>
+                                <li class="is-active"><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="title is-2">Domande frequenti</h1>
+                        <p class="subtitle is-5">Qui trovi le risposte alle domande più comuni su biglietti, eventi e account. Clicca su una domanda per leggere la risposta.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <!-- domande a sinistra e aiuto a destra su desktop, uno sotto l'altro su mobile -->
+                    <div class="columns">
+
+                        <!-- DOMANDE: risposte espandibili con details e summary, senza JavaScript -->
+                        <div class="column is-8">
+
+                            <h2 class="title is-4">
+                                <span class="icon"><i class="fas fa-ticket"></i></span>
+                                Prenotazioni e biglietti
+                            </h2>
+                            <details class="box">
+                                <summary><strong>Come posso prenotare un biglietto?</strong></summary>
+                                <p class="mt-3">Apri la pagina dell'evento che ti interessa e premi il pulsante «Prenota il tuo posto». Scegli il numero di biglietti e completa il pagamento: il biglietto ti arriverà via e-mail.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Quali metodi di pagamento accettate?</strong></summary>
+                                <p class="mt-3">Accettiamo carte di credito, carte di debito e i principali portafogli digitali. Non è possibile pagare in contanti al momento della prenotazione.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Posso annullare una prenotazione e avere il rimborso?</strong></summary>
+                                <p class="mt-3">Puoi annullare la prenotazione fino a 7 giorni prima dell'evento dalla sezione «Le mie prenotazioni». Il rimborso arriva sullo stesso metodo di pagamento entro 10 giorni lavorativi.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Ho perso il biglietto: cosa devo fare?</strong></summary>
+                                <p class="mt-3">Non preoccuparti: il biglietto resta sempre disponibile nel tuo account e nella mail di conferma. Se non trovi nemmeno la mail, scrivici dalla pagina Contatti indicando il nome dell'evento.</p>
+                            </details>
+
+                            <h2 class="title is-4 mt-6">
+                                <span class="icon"><i class="fas fa-calendar"></i></span>
+                                Eventi e partecipazione
+                            </h2>
+                            <details class="box">
+                                <summary><strong>Gli eventi gratuiti vanno prenotati?</strong></summary>
+                                <p class="mt-3">Dipende dall'evento: nella scheda trovi sempre l'indicazione «Ingresso gratuito» e se serve prenotare. Per gli eventi con posti limitati la prenotazione gratuita è obbligatoria.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Cosa succede se un evento viene annullato?</strong></summary>
+                                <p class="mt-3">Se l'organizzatore annulla un evento ti avvisiamo subito via e-mail. Il rimborso del biglietto è automatico e non devi fare nessuna richiesta.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Posso portare i bambini agli eventi?</strong></summary>
+                                <p class="mt-3">Molti eventi sono adatti anche ai più piccoli, ma alcuni hanno dei limiti di età. Prima di prenotare controlla le informazioni pratiche nella pagina dell'evento.</p>
+                            </details>
+
+                            <h2 class="title is-4 mt-6">
+                                <span class="icon"><i class="fas fa-user"></i></span>
+                                Account e assistenza
+                            </h2>
+                            <details class="box">
+                                <summary><strong>Devo creare un account per prenotare?</strong></summary>
+                                <p class="mt-3">Sì, l'account serve per conservare i biglietti e gestire le prenotazioni. La registrazione è gratuita e chiede solo nome, e-mail e una password.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Come cambio la password del mio account?</strong></summary>
+                                <p class="mt-3">Accedi al tuo account e apri la sezione «Profilo». Da lì puoi scegliere una nuova password, che deve avere almeno 8 caratteri.</p>
+                            </details>
+                            <details class="box">
+                                <summary><strong>Come posso contattare l'assistenza?</strong></summary>
+                                <p class="mt-3">Puoi usare il modulo nella pagina <a href="contatti.html">Contatti</a> oppure scrivere ad assistenza@eventhub.example. Rispondiamo dal lunedì al venerdì, di solito entro due giorni lavorativi.</p>
+                            </details>
+                        </div>
+
+                        <!-- AIUTO: link ai contatti e alla homepage -->
+                        <aside class="column is-4">
+                            <article class="message is-info">
+                                <div class="message-header">
+                                    <p>Non hai trovato la risposta?</p>
+                                </div>
+                                <div class="message-body">
+                                    <p class="mb-4">Scrivici dalla pagina Contatti: il nostro team ti risponderà il prima possibile.</p>
+                                    <a class="button is-info" href="contatti.html">Vai ai contatti</a>
+                                </div>
+                            </article>
+                            <a class="button is-light" href="index.html">
+                                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                                <span>Torna alla homepage</span>
+                            </a>
+                        </aside>
+
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- FOOTER: uguale in tutte le pagine -->
         <footer class="footer">
