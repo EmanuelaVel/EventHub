@@ -54,6 +54,7 @@ a:hover {
 a.navbar-item.is-active {
     background-color: var(--secondario);
     color: white;
+    font-weight: 700;
 }
 
 /* FASCIA della newsletter */
@@ -81,14 +82,42 @@ a.navbar-item.is-active {
     color: var(--testo-scuro);
 }
 
-/* ICONE delle categorie: tutte dello stesso colore, si distinguono dal disegno */
-.icona-categoria {
-    color: var(--principale-testo);
+/* SOCIAL nel footer: colori dei marchi, anche in hover */
+.social-instagram,
+.social-instagram:hover {
+    color: #c13584;
+}
+
+.social-facebook,
+.social-facebook:hover {
+    color: #0866ff;
+}
+
+.social-youtube,
+.social-youtube:hover {
+    color: #cc0000;
 }
 
 /* CARD */
 .card {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-content .button {
+    margin-top: auto;
+}
+
+.card-content p:last-of-type {
+    margin-bottom: 0.75rem;
 }
 
 .card-image img {
@@ -96,8 +125,8 @@ a.navbar-item.is-active {
 }
 
 .section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .help {
@@ -107,8 +136,8 @@ a.navbar-item.is-active {
 /* solo su mobile (fino a 768px): meno spazio tra le sezioni e titoli più piccoli */
 @media (max-width: 768px) {
     .section {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
     .title.is-1 {
