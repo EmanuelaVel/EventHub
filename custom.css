@@ -1,5 +1,19 @@
 /* stile personalizzato di EventHub */
 
+/* pulsante della newsletter: verde lime con angoli arrotondati */
+.pulsante-newsletter {
+    background-color: #b5e61d;
+    color: #1f2a00;
+    border-radius: 14px;
+    font-weight: 700;
+}
+
+/* hover del pulsante della newsletter */
+.pulsante-newsletter:hover {
+    background-color: #9fcc12;
+    color: #1f2a00;
+}
+
 /* card tutte alte uguali nella stessa riga */
 .card {
     height: 100%;

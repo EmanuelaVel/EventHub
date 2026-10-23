@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="custom.css">
     </head>
     <body>
-        <!-- navbar: uguale in tutte le pagine, cambia solo la voce attiva -->
+        <!-- NAVBAR: uguale in tutte le pagine, cambia solo la voce attiva -->
         <header>
             <nav class="navbar" role="navigation" aria-label="Navigazione principale">
                 <div class="container">
@@ -41,7 +41,7 @@
         </header>
 
         <main>
-            <!-- hero: titolo principale della pagina, unico h1 -->
+            <!-- HERO: titolo principale della pagina, unico h1 -->
             <section class="hero is-medium">
                 <div class="hero-body">
                     <div class="container">
@@ -68,7 +68,7 @@
                 </div>
             </section>
 
-            <!-- ricerca: form dimostrativo, non invia dati -->
+            <!-- RICERCA: form dimostrativo, non invia dati -->
             <section class="section">
                 <div class="container">
                     <div class="box">
@@ -319,13 +319,55 @@
                 </div>
             </section>
 
-            <!-- sezione PROMOZIONALE -->
-            <section class="hero is-link">
+            <!-- PROMOZIONE E NEWSLETTER -->
+            <section class="hero is-link" id="newsletter">
                 <div class="hero-body">
                     <div class="container has-text-centered">
-                        <h2 class="title is-3">Non perderti i prossimi appuntamenti</h2>
-                        <p class="subtitle is-5">Ogni settimana una mail con i nuovi eventi e le date da segnare in calendario.</p>
-                        <a class="button is-light is-medium" href="#newsletter">Iscriviti alla newsletter</a>
+                        <h2 class="title is-1">Non perderti i prossimi appuntamenti</h2>
+                        <p class="subtitle is-5 mt-5">Ogni settimana una mail con i nuovi eventi e le date da segnare in calendario.</p>
+
+                        <!-- form stretto e centrato: campo e-mail, consenso e pulsante uno sotto l'altro -->
+                        <div class="columns is-centered">
+                            <div class="column is-6-tablet is-4-desktop">
+                                <!-- has-text-left: testi del form allineati a sinistra -->
+                                <form method="post" class="has-text-left">
+                                    <div class="field">
+                                        <!-- has-text-white: testi leggibili sul blu -->
+                                        <label class="label has-text-white" for="email-newsletter">Email</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-medium" id="email-newsletter" name="email" type="email" placeholder="Es. mario.rossi@email.it" required>
+                                            <span class="icon is-left"><i class="fas fa-envelope"></i></span>
+                                        </div>
+                                    </div>
+                                    <p class="mb-2">Ti invitiamo a consultare la nostra <a class="has-text-white" href="#"><strong>informativa privacy</strong></a>.</p>
+                                    <div class="field">
+                                        <div class="control">
+                                            <label class="checkbox has-text-white">
+                                                <input type="checkbox" name="consenso" required>
+                                                Voglio ricevere la newsletter di EventHub
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="has-text-centered">
+                                        <button class="button is-medium pulsante-newsletter" type="submit">Iscriviti</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- STATI DEL MODULO: esempi di successo ed errore -->
+                        <div class="columns is-centered mt-4">
+                            <div class="column is-6-tablet is-4-desktop">
+                                <div class="notification is-success is-light p-3">
+                                    <span class="icon"><i class="fas fa-check"></i></span>
+                                    <strong>Successo (esempio):</strong> grazie per esserti iscritto alla newsletter!
+                                </div>
+                                <div class="notification is-danger is-light p-3">
+                                    <span class="icon"><i class="fas fa-xmark"></i></span>
+                                    <strong>Errore (esempio):</strong> e-mail non valida o consenso mancante.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
