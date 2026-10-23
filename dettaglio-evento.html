@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="custom.css">
     </head>
     <body>
-        <!-- navbar: uguale in tutte le pagine, cambia solo la voce attiva -->
+        <!-- NAVBAR: uguale in tutte le pagine, cambia solo la voce attiva -->
         <!-- voce attiva: Eventi, perché il dettaglio appartiene a questa sezione -->
         <header>
             <nav class="navbar" role="navigation" aria-label="Navigazione principale">
@@ -40,6 +40,219 @@
                 </div>
             </nav>
         </header>
+
+        <main>
+            <section class="section">
+                <div class="container">
+                    <nav class="breadcrumb" aria-label="Percorso">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="eventi.html">Eventi</a></li>
+                            <li class="is-active"><a href="dettaglio-evento.html">Summer Beats Festival</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- IMMAGINE PRINCIPALE -->
+                    <figure class="image is-16by9">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=675&fit=crop" alt="Folla davanti a un palco illuminato durante un concerto">
+                    </figure>
+
+                    <!-- informazioni a sinistra e prenotazione a destra su desktop, una sotto l'altra su mobile -->
+                    <div class="columns mt-5">
+
+                        <!-- INFORMAZIONI EVENTO -->
+                        <div class="column is-8">
+                            <div class="tags">
+                                <span class="tag is-info">Musica</span>
+                                <span class="tag is-danger is-light">In esaurimento</span>
+                            </div>
+                            <h1 class="title is-2">Summer Beats Festival</h1>
+                            <p><span class="icon"><i class="fas fa-calendar"></i></span> Domenica 18 luglio 2027</p>
+                            <p><span class="icon"><i class="fas fa-clock"></i></span> Dalle 18:00 alle 2:00</p>
+                            <p><span class="icon"><i class="fas fa-building"></i></span> Arena Summer Park, Via delle Feste 12</p>
+                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Milano</p>
+
+                            <h2 class="title is-4 mt-5">Descrizione</h2>
+                            <div class="content">
+                                <p>
+                                    Il Summer Beats Festival torna a Milano con la sua edizione più grande: una giornata intera
+                                    dedicata alla musica dal vivo, dal tardo pomeriggio fino a notte fonda. Sui tre palchi
+                                    dell'Arena Summer Park si alterneranno dj, band emergenti e artisti già conosciuti,
+                                    con generi che vanno dall'elettronica al pop, passando per il rock e l'hip hop.
+                                </p>
+                                <p>
+                                    Oltre ai concerti, il festival offre un'area relax all'ombra degli alberi, tanti punti ristoro
+                                    con cucina italiana e internazionale e una zona dedicata ai giochi e alle installazioni luminose.
+                                    È l'occasione perfetta per passare una serata d'estate con gli amici, scoprire nuova musica
+                                    e ballare sotto le stelle. Il biglietto dà accesso a tutti i palchi e a tutte le aree del festival.
+                                </p>
+                            </div>
+
+                            <h2 class="title is-4 mt-5">Programma e organizzazione</h2>
+                            <p class="mb-3">Gli orari possono cambiare di qualche minuto: gli aggiornamenti vengono pubblicati all'ingresso.</p>
+                            <div class="table-container">
+                                <table class="table is-striped is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Orario</th>
+                                            <th>Palco</th>
+                                            <th>Artista</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>18:00</td>
+                                            <td>Palco Giardino</td>
+                                            <td>Luna Park Band</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19:30</td>
+                                            <td>Palco Centrale</td>
+                                            <td>The Night Owls</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21:00</td>
+                                            <td>Palco Centrale</td>
+                                            <td>Sara Onda</td>
+                                        </tr>
+                                        <tr>
+                                            <td>22:30</td>
+                                            <td>Palco Elettronica</td>
+                                            <td>DJ Aurora</td>
+                                        </tr>
+                                        <tr>
+                                            <td>00:30</td>
+                                            <td>Palco Elettronica</td>
+                                            <td>Marco Vento DJ set</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 class="title is-4 mt-5">Informazioni pratiche</h2>
+                            <div class="content">
+                                <ul>
+                                    <li>L'apertura dei cancelli è alle 17:00, un'ora prima del primo concerto.</li>
+                                    <li>I minori di 16 anni possono entrare solo se accompagnati da un adulto.</li>
+                                    <li>Non si possono portare bottiglie di vetro, ombrelli e oggetti pericolosi.</li>
+                                    <li>All'interno si paga solo con carta o smartphone, non in contanti.</li>
+                                    <li>L'area è accessibile alle persone in sedia a rotelle, con una pedana riservata davanti al palco.</li>
+                                    <li>C'è un guardaroba a pagamento vicino all'ingresso principale.</li>
+                                </ul>
+                            </div>
+
+                            <h2 class="title is-4 mt-5">Come arrivare</h2>
+                            <div class="content">
+                                <ul>
+                                    <li><strong>Metropolitana:</strong> la fermata più vicina è a 10 minuti a piedi dall'ingresso.</li>
+                                    <li><strong>Navetta:</strong> una navetta gratuita parte ogni 20 minuti dalla stazione Centrale, dalle 16:30 alle 2:30.</li>
+                                    <li><strong>Auto:</strong> c'è un parcheggio a pagamento in Via delle Feste, ma i posti sono pochi.</li>
+                                    <li><strong>Bicicletta:</strong> davanti all'ingresso ci sono le rastrelliere custodite.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- PRENOTAZIONE, DISPONIBILITÀ E ORGANIZZATORE -->
+                        <aside class="column is-4">
+                            <div class="box">
+                                <h2 class="title is-4">Biglietto</h2>
+                                <p class="title is-3">45 €</p>
+                                <p class="mb-4">Ingresso a tutti i palchi e a tutte le aree del festival.</p>
+                                <div class="buttons">
+                                    <!-- type="button": nessun acquisto reale -->
+                                    <button class="button is-primary" type="button">Prenota il tuo posto</button>
+                                    <a class="button is-primary is-outlined" href="eventi.html">Torna agli eventi</a>
+                                </div>
+                            </div>
+
+                            <article class="message is-warning">
+                                <div class="message-header">
+                                    <p>Disponibilità</p>
+                                </div>
+                                <div class="message-body">
+                                    Restano circa <strong>120 biglietti</strong> su 5.000. Ti consigliamo di prenotare presto.
+                                </div>
+                            </article>
+
+                            <div class="box">
+                                <h2 class="title is-5">Organizzatore</h2>
+                                <p><strong>Beats Live Eventi</strong></p>
+                                <p class="mb-3">Organizza festival e concerti all'aperto in tutta Italia dal 2015.</p>
+                                <p>
+                                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                                    <a href="mailto:info@beatslive.example">info@beatslive.example</a>
+                                </p>
+                            </div>
+                        </aside>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- EVENTI CORRELATI -->
+            <section class="section has-background-light">
+                <div class="container">
+                    <h2 class="title is-3">Eventi correlati</h2>
+                    <div class="columns is-multiline">
+
+                        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                            <article class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&h=450&fit=crop" alt="Musicisti che suonano il sassofono su un palco">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <span class="tag is-info">Musica</span>
+                                    <h3 class="title is-5 mt-3">Jazz sotto le stelle</h3>
+                                    <p><span class="icon"><i class="fas fa-calendar"></i></span> 12 giugno 2027</p>
+                                    <p><span class="icon"><i class="fas fa-location-dot"></i></span> Torino</p>
+                                    <p class="mt-3"><strong>Biglietto: 30 €</strong></p>
+                                    <a class="button is-primary mt-3" href="eventi.html">Scopri di più</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                            <article class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=450&fit=crop" alt="Spiedini di carne e verdure grigliate con diverse salse">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <span class="tag is-primary">Food e festival</span>
+                                    <h3 class="title is-5 mt-3">Festival dello street food</h3>
+                                    <p><span class="icon"><i class="fas fa-calendar"></i></span> 17 aprile 2027</p>
+                                    <p><span class="icon"><i class="fas fa-location-dot"></i></span> Bologna</p>
+                                    <p class="mt-3"><span class="tag is-success">Ingresso gratuito</span></p>
+                                    <a class="button is-primary mt-3" href="eventi.html">Scopri di più</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                            <article class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=450&fit=crop" alt="Sagome di tre attori su un palco con il sipario rosso">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <span class="tag is-danger">Arte e cultura</span>
+                                    <h3 class="title is-5 mt-3">Sogno di una notte di mezza estate</h3>
+                                    <p><span class="icon"><i class="fas fa-calendar"></i></span> 14 febbraio 2027</p>
+                                    <p><span class="icon"><i class="fas fa-location-dot"></i></span> Milano</p>
+                                    <p class="mt-3"><strong>Biglietto: 28 €</strong></p>
+                                    <a class="button is-primary mt-3" href="eventi.html">Scopri di più</a>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- FOOTER: uguale in tutte le pagine -->
         <footer class="footer">
