@@ -40,6 +40,371 @@
             </nav>
         </header>
 
+        <main>
+            <!-- HERO compatto con breadcrumb e titolo, unico h1 -->
+            <section class="hero is-small has-background-light">
+                <div class="hero-body">
+                    <div class="container">
+                        <nav class="breadcrumb" aria-label="Percorso">
+                            <ul>
+                                <li><a href="index.html">Homepage</a></li>
+                                <li class="is-active"><a href="eventi.html">Eventi</a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="title is-2">Tutti gli eventi</h1>
+                        <p class="subtitle is-5">Concerti, gare, workshop, mostre e festival: scegli quello che fa per te.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ricerca: form dimostrativo, non invia dati -->
+            <section class="section">
+                <div class="container">
+                    <div class="box">
+                        <h2 class="title is-4">Cerca un evento</h2>
+                        <form>
+                            <!-- 4 colonne su desktop, 2 su tablet, 1 su mobile -->
+                            <div class="columns is-multiline">
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="nome-evento">Nome dell'evento</label>
+                                        <div class="control">
+                                            <input class="input" id="nome-evento" name="nome-evento" type="text" placeholder="Es. Summer Beats Festival">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="categoria">Categoria</label>
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select id="categoria" name="categoria">
+                                                    <option value="">Tutte le categorie</option>
+                                                    <option value="musica">Musica</option>
+                                                    <option value="sport">Sport</option>
+                                                    <option value="tecnologia">Tecnologia</option>
+                                                    <option value="arte">Arte e cultura</option>
+                                                    <option value="food">Food e festival</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="citta">Città</label>
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select id="citta" name="citta">
+                                                    <option value="">Tutte le città</option>
+                                                    <option value="milano">Milano</option>
+                                                    <option value="roma">Roma</option>
+                                                    <option value="torino">Torino</option>
+                                                    <option value="bologna">Bologna</option>
+                                                    <option value="napoli">Napoli</option>
+                                                    <option value="firenze">Firenze</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-3-desktop">
+                                    <div class="field">
+                                        <label class="label" for="data">Data</label>
+                                        <div class="control">
+                                            <input class="input" id="data" name="data" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="help mb-4">Puoi compilare anche un solo campo: quelli vuoti non vengono considerati nella ricerca.</p>
+                            <div class="buttons">
+                                <!-- type="button": il pulsante non invia il form -->
+                                <button class="button is-primary" type="button">Cerca</button>
+                                <!-- type="reset": svuota tutti i campi del form -->
+                                <button class="button is-light" type="reset">Azzera filtri</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATALOGO: categorie a sinistra su desktop, sopra i risultati su mobile -->
+            <section class="section pt-0">
+                <div class="container">
+                    <div class="columns">
+
+                        <aside class="column is-3">
+                            <nav class="panel">
+                                <p class="panel-heading">Categorie</p>
+                                <a class="panel-block is-active" href="eventi.html">
+                                    <span class="panel-icon"><i class="fas fa-list"></i></span> Tutte le categorie
+                                </a>
+                                <a class="panel-block" href="eventi.html">
+                                    <span class="panel-icon"><i class="fas fa-music"></i></span> Musica
+                                </a>
+                                <a class="panel-block" href="eventi.html">
+                                    <span class="panel-icon"><i class="fas fa-person-running"></i></span> Sport
+                                </a>
+                                <a class="panel-block" href="eventi.html">
+                                    <span class="panel-icon"><i class="fas fa-laptop-code"></i></span> Tecnologia
+                                </a>
+                                <a class="panel-block" href="eventi.html">
+                                    <span class="panel-icon"><i class="fas fa-palette"></i></span> Arte e cultura
+                                </a>
+                                <a class="panel-block" href="eventi.html">
+                                    <span class="panel-icon"><i class="fas fa-utensils"></i></span> Food e festival
+                                </a>
+                            </nav>
+                        </aside>
+
+                        <div class="column is-9">
+                            <!-- BARRA con contatore e ordinamento: solo grafica -->
+                            <div class="box">
+                                <div class="columns is-vcentered">
+                                    <div class="column">
+                                        <h2 class="title is-5">Risultati <span class="tag is-link is-medium">9 eventi</span></h2>
+                                    </div>
+                                    <div class="column is-one-third">
+                                        <div class="field">
+                                            <label class="label" for="ordina">Ordina per</label>
+                                            <div class="control">
+                                                <div class="select is-fullwidth">
+                                                    <select id="ordina" name="ordina">
+                                                        <option value="data">Data</option>
+                                                        <option value="prezzo">Prezzo</option>
+                                                        <option value="popolarita">Popolarità</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- EVENTI: 3 card per riga su desktop, 2 su tablet, 1 su mobile -->
+                            <div class="columns is-multiline">
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=450&fit=crop" alt="Folla davanti a un palco illuminato durante un concerto">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-info">Musica</span>
+                                                <span class="tag is-danger is-light">In esaurimento</span>
+                                            </div>
+                                            <h3 class="title is-5">Summer Beats Festival</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 18 luglio 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Milano</p>
+                                            <p class="mt-3">Una serata all'aperto con dj e band dal vivo, tre palchi e musica dal tramonto fino a notte fonda. Ci sono anche un'area relax e tanti punti ristoro.</p>
+                                            <p class="mt-3"><strong>Biglietto: 45 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&h=450&fit=crop" alt="Gruppo di ciclisti durante una gara su strada">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-warning">Sport</span>
+                                            </div>
+                                            <h3 class="title is-5">Granfondo delle colline: gara ciclistica amatoriale di 90 km</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 21 marzo 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Firenze</p>
+                                            <p class="mt-3">Un percorso tra le colline toscane aperto a tutti i ciclisti tesserati. Lungo la strada ci sono tre punti di ristoro e l'assistenza tecnica.</p>
+                                            <p class="mt-3"><strong>Iscrizione: 25 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=450&fit=crop" alt="Computer portatile con del codice sullo schermo">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-link">Tecnologia</span>
+                                            </div>
+                                            <h3 class="title is-5">Workshop di HTML e CSS per principianti</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 28 novembre 2026</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Torino</p>
+                                            <p class="mt-3">Una giornata pratica per creare la tua prima pagina web partendo da zero. Basta portare il proprio portatile, non serve nessuna esperienza.</p>
+                                            <p class="mt-3"><strong>Biglietto: 20 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=600&h=450&fit=crop" alt="Sala di un museo con quadri antichi appesi alla parete">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-danger">Arte e cultura</span>
+                                            </div>
+                                            <h3 class="title is-5">Luci e colori: la pittura dell'Ottocento</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 5 dicembre 2026</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Roma</p>
+                                            <p class="mt-3">Una mostra con oltre cinquanta quadri di pittori italiani ed europei dell'Ottocento. Ogni domenica mattina c'è una visita guidata compresa.</p>
+                                            <p class="mt-3"><span class="tag is-success">Ingresso gratuito</span></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=450&fit=crop" alt="Spiedini di carne e verdure grigliate con diverse salse">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-primary">Food e festival</span>
+                                            </div>
+                                            <h3 class="title is-5">Festival dello street food</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 17 aprile 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Bologna</p>
+                                            <p class="mt-3">Tre giorni con più di quaranta stand di cibo da strada da tutte le regioni d'Italia. La sera ci sono concerti e spettacoli in piazza.</p>
+                                            <p class="mt-3"><span class="tag is-success">Ingresso gratuito</span></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=450&fit=crop" alt="Ragazzo con le cuffie che gioca a un videogioco al computer">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-link">Tecnologia</span>
+                                                <span class="tag is-danger is-light">In esaurimento</span>
+                                            </div>
+                                            <h3 class="title is-5">Gaming Night: torneo di videogiochi</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 30 gennaio 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Napoli</p>
+                                            <p class="mt-3">Una notte di sfide a squadre sui videogiochi più famosi, con postazioni già pronte e premi per i primi tre classificati. Si gioca anche in coppia.</p>
+                                            <p class="mt-3"><strong>Biglietto: 10 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&h=450&fit=crop" alt="Musicisti che suonano il sassofono su un palco">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-info">Musica</span>
+                                            </div>
+                                            <h3 class="title is-5">Jazz sotto le stelle</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 12 giugno 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Torino</p>
+                                            <p class="mt-3">Un concerto all'aperto nel cortile di un palazzo storico con un quintetto jazz e ospiti a sorpresa. Si consiglia di portare un cuscino.</p>
+                                            <p class="mt-3"><strong>Biglietto: 30 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?w=600&h=450&fit=crop" alt="Tanti corridori lungo una strada di città durante una maratona">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-warning">Sport</span>
+                                            </div>
+                                            <h3 class="title is-5">Maratona di primavera</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 4 aprile 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Roma</p>
+                                            <p class="mt-3">Una corsa di 42 km per le strade del centro, con partenza e arrivo al Circo Massimo. C'è anche un percorso breve di 10 km per chi inizia.</p>
+                                            <p class="mt-3"><strong>Iscrizione: 15 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                                    <article class="card">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=450&fit=crop" alt="Sagome di tre attori su un palco con il sipario rosso">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="tags">
+                                                <span class="tag is-danger">Arte e cultura</span>
+                                            </div>
+                                            <h3 class="title is-5">Sogno di una notte di mezza estate</h3>
+                                            <p><span class="icon"><i class="fas fa-calendar"></i></span> 14 febbraio 2027</p>
+                                            <p><span class="icon"><i class="fas fa-location-dot"></i></span> Milano</p>
+                                            <p class="mt-3">La commedia di Shakespeare in una nuova versione con musiche dal vivo e costumi colorati. Lo spettacolo dura due ore con un breve intervallo.</p>
+                                            <p class="mt-3"><strong>Biglietto: 28 €</strong></p>
+                                            <a class="button is-primary mt-3" href="dettaglio-evento.html">Scopri di più</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                            </div>
+
+                            <!-- MESSAGGIO DI STATO VUOTO: esempio per una ricerca senza risultati -->
+                            <article class="message is-warning mt-5">
+                                <div class="message-header">
+                                    <p>Nessun evento trovato (esempio)</p>
+                                </div>
+                                <div class="message-body">
+                                    Non ci sono eventi che corrispondono ai filtri scelti. Prova a cambiare categoria, città o data, oppure usa il pulsante «Azzera filtri».
+                                </div>
+                            </article>
+
+                            <!-- PAGINAZIONE: solo grafica -->
+                            <nav class="pagination is-centered mt-5" aria-label="Pagine dei risultati">
+                                <a class="pagination-previous is-disabled" href="#">Precedente</a>
+                                <a class="pagination-next" href="#">Successiva</a>
+                                <ul class="pagination-list">
+                                    <li><a class="pagination-link is-current" href="#">1</a></li>
+                                    <li><a class="pagination-link" href="#">2</a></li>
+                                    <li><a class="pagination-link" href="#">3</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
         <!-- FOOTER: uguale in tutte le pagine -->
         <footer class="footer">
             <div class="container">
