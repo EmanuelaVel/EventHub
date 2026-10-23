@@ -1,20 +1,124 @@
 /* stile personalizzato di EventHub */
 
+/* PALETTE: colori del sito (variabili CSS) */
+:root {
+    --principale: #00d1b2;        /* turchese: pulsanti principali */
+    --principale-scuro: #00a88f;  /* turchese scuro: hover dei pulsanti */
+    --principale-testo: #00786a;  /* turchese scuro: testi e icone turchesi */
+    --secondario: #4258ff;        /* blu: link, navbar, fascia della newsletter */
+    --accento: #b5e61d;           /* verde lime: pulsante della newsletter */
+    --accento-scuro: #9fcc12;     /* verde lime scuro: hover del pulsante della newsletter */
+    --testo-scuro: #0a0a0a;       /* quasi nero: testo sopra il turchese e il verde lime */
+    --sfondo: #ffffff;            /* bianco: sfondo del sito */
+}
+
+/* SFONDO del sito */
+html {
+    background-color: var(--sfondo);
+}
+
+/* LINK */
+a,
+.breadcrumb a {
+    color: var(--secondario);
+}
+
+a:hover {
+    color: var(--principale-testo);
+}
+
+/* PULSANTI principali */
+.button.is-primary {
+    background-color: var(--principale);
+    color: var(--testo-scuro);
+}
+
+.button.is-primary:hover {
+    background-color: var(--principale-scuro);
+    color: var(--testo-scuro);
+}
+
+/* pulsanti outline (es. "Come funziona EventHub") */
+.button.is-primary.is-outlined {
+    background-color: transparent;
+    border-color: var(--principale-testo);
+    color: var(--principale-testo);
+}
+
+.button.is-primary.is-outlined:hover {
+    background-color: var(--principale-testo);
+    color: white;
+}
+
+/* NAVBAR: voce attiva in bianco e grassetto */
+a.navbar-item.is-active {
+    background-color: var(--secondario);
+    color: white;
+}
+
+/* FASCIA della newsletter */
+.fascia-newsletter {
+    background-color: var(--secondario);
+    color: white;
+}
+
+.fascia-newsletter .title,
+.fascia-newsletter .subtitle {
+    color: white;
+}
+
 /* pulsante della newsletter: verde lime con angoli arrotondati */
 .pulsante-newsletter {
-    background-color: #b5e61d;
-    color: #1f2a00;
+    background-color: var(--accento);
+    color: var(--testo-scuro);
     border-radius: 14px;
     font-weight: 700;
 }
 
 /* hover del pulsante della newsletter */
 .pulsante-newsletter:hover {
-    background-color: #9fcc12;
-    color: #1f2a00;
+    background-color: var(--accento-scuro);
+    color: var(--testo-scuro);
 }
 
-/* card tutte alte uguali nella stessa riga */
+/* ICONE delle categorie: tutte dello stesso colore, si distinguono dal disegno */
+.icona-categoria {
+    color: var(--principale-testo);
+}
+
+/* CARD */
 .card {
     height: 100%;
+}
+
+.card-image img {
+    object-fit: cover;
+}
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.help {
+    font-size: 0.85rem;
+}
+
+/* solo su mobile (fino a 768px): meno spazio tra le sezioni e titoli più piccoli */
+@media (max-width: 768px) {
+    .section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .title.is-1 {
+        font-size: 2.25rem;
+    }
+}
+
+/* solo su desktop (da 1024px): ombra sulle card in hover */
+@media (min-width: 1024px) {
+    .card:hover {
+        box-shadow: 0 8px 24px rgba(66, 88, 255, 0.25);
+    }
 }
