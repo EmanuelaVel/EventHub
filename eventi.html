@@ -384,7 +384,7 @@
                                     <p>Nessun evento trovato (esempio)</p>
                                 </div>
                                 <div class="message-body">
-                                    Non ci sono eventi che corrispondono ai filtri scelti. Prova a cambiare categoria, città o data, oppure usa il pulsante «Azzera filtri».
+                                    Non ci sono eventi che corrispondono ai filtri scelti. Prova a cambiare categoria, città o data, oppure usa il pulsante "Azzera filtri".
                                 </div>
                             </article>
 
@@ -405,47 +405,50 @@
             </section>
 
             <!-- PROMOZIONE E NEWSLETTER -->
-            <section class="hero is-small fascia-newsletter" id="newsletter">
-                <div class="hero-body">
-                    <div class="container has-text-centered">
-                        <h2 class="title is-1">Non perderti i prossimi appuntamenti</h2>
-                        <p class="subtitle is-5 mt-3 mb-4">Ogni settimana una mail con i nuovi eventi e le date da segnare in calendario.</p>
+            <section class="section fascia-newsletter" id="newsletter">
+                <div class="container has-text-centered">
+                    <h2 class="title is-2">Non perderti i prossimi appuntamenti</h2>
+                    <div class="columns is-centered">
+                        <div class="column is-8-tablet is-6-desktop py-0">
+                            <p class="subtitle is-5 mb-4">Iscriviti alla newsletter: ogni settimana una mail con i nuovi eventi e le date da segnare in calendario.</p>
+                        </div>
+                    </div>
 
-                        <div class="columns is-centered">
-                            <div class="column is-6-tablet is-4-desktop">
-                                <!-- has-text-left: testi del form allineati a sinistra -->
-                                <form method="post" class="has-text-left">
-                                    <div class="field">
-                                        <!-- has-text-white: testi leggibili sul blu -->
-                                        <label class="label has-text-white" for="email-newsletter">Email</label>
-                                        <div class="control has-icons-left">
-                                            <input class="input is-medium" id="email-newsletter" name="email" type="email" placeholder="Es. mario.rossi@email.it" required>
-                                            <span class="icon is-left"><i class="fas fa-envelope"></i></span>
-                                        </div>
+                    <div class="columns is-centered">
+                        <div class="column is-7-tablet is-5-desktop">
+                            <!-- has-text-left: testi del form allineati a sinistra -->
+                            <form method="post" class="has-text-left">
+                                <!-- is-sr-only: etichetta nascosta, letta solo dai lettori di schermo -->
+                                <label class="label is-sr-only" for="email-newsletter">Email</label>
+                                <!-- is-grouped: campo e pulsante sulla stessa riga -->
+                                <div class="field is-grouped">
+                                    <!-- is-expanded: il campo occupa lo spazio disponibile -->
+                                    <div class="control has-icons-left is-expanded">
+                                        <input class="input" id="email-newsletter" name="email" type="email" placeholder="Inserisci la tua email" required>
+                                        <span class="icon is-left"><i class="fas fa-envelope"></i></span>
                                     </div>
-                                    <p class="mb-2">Ti invitiamo a consultare la nostra <a class="has-text-white" href="#"><strong>informativa privacy</strong></a>.</p>
-                                    <div class="field">
-                                        <div class="control">
-                                            <label class="checkbox has-text-white">
-                                                <input type="checkbox" name="consenso" required>
-                                                Voglio ricevere la newsletter di EventHub
-                                            </label>
-                                        </div>
+                                    <div class="control">
+                                        <button class="button pulsante-newsletter" type="submit">Iscriviti</button>
                                     </div>
-                                    <div class="has-text-centered">
-                                        <button class="button is-medium pulsante-newsletter" type="submit">Iscriviti</button>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="consenso" required>
+                                            Cliccando su "Iscriviti" dichiaro di aver letto l'<a href="#"><strong>informativa privacy</strong></a> e di voler ricevere la newsletter di EventHub.
+                                        </label>
                                     </div>
-                                </form>
+                                </div>
+                            </form>
 
-                                <!-- STATI DEL MODULO: esempi di successo ed errore -->
-                                <div class="notification is-success is-light p-3 mt-4 mb-3">
-                                    <span class="icon"><i class="fas fa-check"></i></span>
-                                    <strong>Successo (esempio):</strong> grazie per esserti iscritto alla newsletter!
-                                </div>
-                                <div class="notification is-danger is-light p-3">
-                                    <span class="icon"><i class="fas fa-xmark"></i></span>
-                                    <strong>Errore (esempio):</strong> e-mail non valida o consenso mancante.
-                                </div>
+                            <!-- STATI DEL MODULO: esempi di successo ed errore -->
+                            <div class="notification is-success is-light p-3 mt-4 mb-3">
+                                <span class="icon"><i class="fas fa-check"></i></span>
+                                <strong>Successo (esempio):</strong> grazie per esserti iscritto alla newsletter!
+                            </div>
+                            <div class="notification is-danger is-light p-3">
+                                <span class="icon"><i class="fas fa-xmark"></i></span>
+                                <strong>Errore (esempio):</strong> e-mail non valida o consenso mancante.
                             </div>
                         </div>
                     </div>

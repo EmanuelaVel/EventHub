@@ -5,11 +5,12 @@
     --principale: #00d1b2;        /* turchese: pulsanti principali */
     --principale-scuro: #00a88f;  /* turchese scuro: hover dei pulsanti */
     --principale-testo: #00786a;  /* turchese scuro: testi e icone turchesi */
-    --secondario: #4258ff;        /* blu: link, navbar, fascia della newsletter */
+    --secondario: #4258ff;        /* blu: link e navbar */
     --accento: #b5e61d;           /* verde lime: pulsante della newsletter */
     --accento-scuro: #9fcc12;     /* verde lime scuro: hover del pulsante della newsletter */
     --testo-scuro: #0a0a0a;       /* quasi nero: testo sopra il turchese e il verde lime */
     --sfondo: #ffffff;            /* bianco: sfondo del sito */
+    --sfondo-newsletter: #4f63ff; /* blu chiaro: sfondo della fascia della newsletter */
 }
 
 /* SFONDO del sito */
@@ -57,22 +58,26 @@ a.navbar-item.is-active {
     font-weight: 700;
 }
 
-/* FASCIA della newsletter */
+/* FASCIA della newsletter: sfondo blu e testi bianchi */
 .fascia-newsletter {
-    background-color: var(--secondario);
+    background-color: var(--sfondo-newsletter);
     color: white;
 }
 
 .fascia-newsletter .title,
-.fascia-newsletter .subtitle {
+.fascia-newsletter .subtitle,
+.fascia-newsletter .label,
+.fascia-newsletter .checkbox,
+.fascia-newsletter .checkbox:hover,
+.fascia-newsletter a,
+.fascia-newsletter a:hover {
     color: white;
 }
 
-/* pulsante della newsletter: verde lime con angoli arrotondati */
+/* pulsante della newsletter: verde lime con il testo scuro */
 .pulsante-newsletter {
     background-color: var(--accento);
     color: var(--testo-scuro);
-    border-radius: 14px;
     font-weight: 700;
 }
 
